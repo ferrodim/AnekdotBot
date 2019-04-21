@@ -1,0 +1,7 @@
+version: '3'
+services:
+  aa:
+    build: .
+    restart: always
+    volumes:
+      - ".:/code"
