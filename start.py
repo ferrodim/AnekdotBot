@@ -29,7 +29,7 @@ def pub(m):
                 bot.send_message(m.chat.id, entry['description'].replace('<br>', "\n"), reply_markup=keyboard,
                                  disable_web_page_preview=True)
     elif m.text == 'Истории':
-        f = feedparser.parse("https://www.anekdot.ru/rss/export_j.xml")
+        f = feedparser.parse("https://www.anekdot.ru/rss/export_o.xml")
         for entry in f['entries']:
             if len(entry['description']) < 1500:
                 bot.send_message(m.chat.id, entry['description'].replace('<br>', "\n"), reply_markup=keyboard,
