@@ -34,6 +34,8 @@ def pub(m):
             if len(entry['description']) < 1500:
                 bot.send_message(m.chat.id, entry['description'].replace('<br>', "\n"), reply_markup=keyboard,
                                  disable_web_page_preview=True)
+    else:
+        bot.send_message(m.chat.id, '', reply_markup=keyboard)
 
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
